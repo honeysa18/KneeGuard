@@ -1,11 +1,10 @@
 # KneeGuard
 IoT-enabled smart knee brace for real-time patellar tracking, vibration analysis, and rehabilitation monitoring.
 
-# Real-Time Wearable Smart System for Detecting Patellar Disorientation and Enhancing Patellar Stability
-
 ## Overview
 
-This project presents a wearable smart rehabilitation system designed to monitor knee biomechanics in real time and assist in the early detection of patellar instability.
+This project presents a wearable smart rehabilitation system designed to monitor knee biomechanics in real time and assist in the early detection of patellar instability. It can be described as a real-time wearable smart system for detecting patellar disorientation and enhancing patellar stability
+
 
 The system combines:
 
@@ -15,7 +14,7 @@ The system combines:
 * Custom 3D-Printed Knee Brace
 * Real-Time Web Monitoring Application
 
-Sensor data is collected directly from the knee brace, processed by the ESP32, and transmitted wirelessly to a web application that visualizes knee movement and vibration patterns. The system alerts users whenever abnormal patellar vibrations or unsafe knee movements are detected.
+Sensor data is collected directly from the knee brace, processed by the ESP32, and transmitted wirelessly to a web application that quantifies knee movement and vibration patterns. The system alerts users whenever abnormal patellar vibrations or unsafe knee movements are detected.
 
 ---
 
@@ -44,6 +43,15 @@ Sensor data is collected directly from the knee brace, processed by the ESP32, a
 
 ---
 
+## Software Components
+
+- ESP32 Firmware (.ino)
+- Embedded Web Interface (webapp.h)
+
+The web dashboard is stored directly within the ESP32 firmware as a header file and served through the ESP32 web server. No separate hosting or web server is required.
+
+---
+
 ## System Architecture
 
 PVDF Sensor + MPU6050
@@ -68,6 +76,7 @@ Calibration + Monitoring + Alerts
    * Threshold mapping
    * Real-time visualization
    * Alert generation
+    
 6. Users receive warnings when vibration or angle values exceed safe limits.
 
 ---
@@ -76,7 +85,6 @@ Calibration + Monitoring + Alerts
 
 ```text
 ESP32_Firmware/
-WebApp/
 Images/
 3D_Model/
 Documentation/
@@ -100,7 +108,7 @@ Documentation/
 ### Web Application
 
 1. Open the WebApp folder.
-2. Launch `index.html`.
+2. Launch `webapp.h`.
 3. Connect the ESP32 device.
 4. Start monitoring.
 
